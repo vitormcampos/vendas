@@ -24,7 +24,7 @@ $varnav = "
         <li class='nav-item dropdown'>
         <a class='nav-link dropdown-toggle text-white' data-toggle='dropdown' href='#'>Movimentações</a>
         <div class='dropdown-menu'>
-            <a class='nav-link active text-center text-dark' href='//localhost/vendas/view/inicia_movimento.php'>Iniciar Venda</a>
+            <a class='nav-link active text-center text-dark' href='//localhost/vendas/view/venda_cabecalho.php'>Iniciar Venda</a>
             <a class='nav-link active text-center text-dark' href=''>Entrada</a>
             <a class='nav-link active text-center text-dark' href=''>Saida</a>
         </div>

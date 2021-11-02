@@ -1,6 +1,7 @@
 create database if not exists vendas;
 use vendas;
-create table if not exists cliente(
+create table if not exists cliente
+(
 id int primary key auto_increment,
 nome varchar(20),
 sobrenome varchar(20),
@@ -32,7 +33,8 @@ estado varchar(50),
 cep varchar(8)
 );
 
-create table if not exists produto (
+create table if not exists produto 
+(
 id int primary key auto_increment,
 descricao varchar(120),
 gtin varchar(20),
@@ -42,23 +44,24 @@ fornecedor_id int,
 foreign key(fornecedor_id) references fornecedor(id)
 );
 
-create table if not exists venda (
-id int auto_increment primary key,
-valor double,
-cliente_id int,
-movimento_id int
+create table if not exists venda_cabecalho 
+(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    observacao VARCHAR(100),
+    data_hora DATETIME NOT NULL,
+    cliente_id int,
+    FOREIGN KEY(cliente_id) REFERENCES cliente(id)
 );
 
-create table if not exists movimento (
-id int auto_increment primary key,
-datahora_inicio datetime,
-datahora_fim datetime,
-venda_id int
-);
 
-create table if not exists venda_produtos (
-id int auto_increment primary key,
-produto_id int,
-venda_id int
+create table if not exists venda_detalhe
+(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    quantidade INT NOT NULL,
+    valor INT NOT NULL,
+    venda_id INT,
+    produto_id INT,
+    FOREIGN KEY(venda_id) REFERENCES venda_cabecalho(id),
+    FOREIGN KEY(produto_id) REFERENCES produto(id)
 );
 
