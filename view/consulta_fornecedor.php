@@ -24,7 +24,7 @@ $query = @mysqli_query($conexao, $sql) or die($mysqli->error);
 <body>
 
     <!-- Navbar -->
-    <?php echo $varnav; ?>
+    <?php echo get_navbar(); ?>
 
     <!-- Tabela de fornecedores -->
     <table class="table">

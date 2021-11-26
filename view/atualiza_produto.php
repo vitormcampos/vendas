@@ -24,7 +24,7 @@ $query = @mysqli_query($conexao, $sql) or die($mysqli->error);
 </head>
 
 <body>
-    <?php echo $varnav; ?>
+    <?php echo get_navbar(); ?>
     <div class="container-fluid my-5 p-5 rounded" style="width: 70vw; background-color: cornflowerblue;">
         <h3 class="text-center p-3 text-white">Alterar Produto</h3>
         <form action="..\dao\Produto.php" method="post">

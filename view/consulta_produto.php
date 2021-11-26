@@ -22,7 +22,7 @@ $query = @mysqli_query($conexao, "select * from produto") or die($mysqli->error)
 <body>
 
     <!-- Navbar -->
-    <?php echo $varnav; ?>
+    <?php echo get_navbar(); ?>
 
     <!-- Tabela de Clientes -->
     <table class="table">

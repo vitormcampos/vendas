@@ -20,7 +20,7 @@ $cliente = mysqli_fetch_array($consulta_sql);
 </head>
 
 <body>
-    <?php echo $varnav; ?>
+    <?php echo get_navbar() ?>
     <div class="container-fluid my-5 p-5 rounded" style="width: 70vw; background-color: cornflowerblue;">
         <h3 class="text-center p-5 text-white">Alterar Clientes</h3>
         <form method="post" action="../dao/Cliente.php">
