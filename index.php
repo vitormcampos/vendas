@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("./view/nav.php");
 ?>
 <!DOCTYPE html>
@@ -18,9 +18,9 @@ include("./view/nav.php");
 
 
 <body>
-<?php echo $varnav; ?>
-<div class="container-fluid">
-</div>
+    <?php echo get_navbar(); ?>
+    <div class="container-fluid">
+    </div>
 
 </body>
 
