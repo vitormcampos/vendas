@@ -5,8 +5,8 @@ include("../controller/conexao.php");
 //Conteudo do corpo da requisição
 $produto_id = $_POST['produto'];
 $quantidade = $_POST['quantidade'];
-$cliente = $_POST['cliente'];
-$venda_id = $_POST['venda'];
+$fornecedor = $_POST['fornecedor'];
+$compra_id = $_POST['compra'];
 
 
 //Capturando produto pelo id
@@ -20,17 +20,17 @@ $total = $quantidade * $valor;
 
 $sql_insert = @mysqli_query(
     $conexao,
-    "insert into venda_detalhe
+    "insert into compra_detalhe
     (
         quantidade,
         valor,
-        venda_id,
+        compra_cabecalho_id,
         produto_id
     )
     values (
         '$quantidade',
         '$total',
-        '$venda_id',
+        '$compra_id',
         '$produto_id'
 )");
 
@@ -40,7 +40,7 @@ if(!$sql_insert)
 }
 else
 {
-    header('Location: ../view/venda_detalhe.php');
+    header('Location: ../view/compra_detalhe.php');
 }
 mysqli_close($conexao);
 ?>

@@ -6,8 +6,8 @@ $cliente = $_POST["cliente"];
 $observacao = $_POST["observacao"];
 
 $sql = @mysqli_query($conexao, "insert into venda_cabecalho 
-                                (observacao, data_hora, cliente_id) 
-                                values ('$observacao', now(), $cliente)");
+                                (observacao, data_hora, cliente_id, valor) 
+                                values ('$observacao', now(), $cliente, 0.0)");
 
 if(!$sql) 
     die("Consulta invalida: " . @mysqli_error($conexao));
